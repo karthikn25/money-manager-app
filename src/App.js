@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import {Switch,Route} from 'react-router-dom';
+import Dashboard from './Component/Dashboard';
+import Monthlyreport from './Component/Monthlyreport';
+import Weaklyreport from './Component/Weaklyreport';
+import Yearlyreport from './Component/Yearlyreport';
+import Addincome from './Component/Addincome';
+import Addexpense from './Component/Addexpense';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+      <Route exact path='/'>
+      <Dashboard/>
+      </Route>
+      <Route path='/monthly'>
+      <Monthlyreport/>
+      </Route>
+      <Route path='/weakly'>
+      <Weaklyreport/>
+      </Route>
+      <Route path='/yearly'>
+      <Yearlyreport/>
+      </Route>
+      <Route path='/addincome'>
+      <Addincome/>
+      </Route>
+      <Route path='/addexpense'>
+      <Addexpense/>
+      </Route>
+      </Switch>
     </div>
   );
 }
