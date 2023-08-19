@@ -1,0 +1,130 @@
+.base-content{
+  display: flex;
+  flex-direction:column;
+  
+   
+  >.top-navbar{
+   
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background: transparent;
+    
+  }
+  >.left-navbar{
+    margin-top: 9vh;
+    padding-top: 10px;
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+   >.link-container{
+    
+
+    >.nav{
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      >ul{
+        width: 100%;
+        list-style-type: none;
+        
+     >.dropdown{
+      width: 250px;
+      margin: 10px auto;
+      
+      >.dropdown-btn{
+        padding: 15px 20px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >ul{
+          display: flexbox;
+          list-style-type:square;
+          cursor: pointer;
+          
+        }
+      }
+     }
+        >li{
+          width: 100%;
+          height: 50px;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          color: #ffff;
+          cursor: pointer;
+
+         >span{
+          margin-right: 20px;
+         }
+        }
+        >li:hover{
+          background: rgba(255, 255,255, 0.2);
+        }
+        >.active{
+          background: rgba(255, 255,255, 0.2);
+        }
+      }
+    }
+   }
+   
+  }
+  >.content-container{
+    padding-top: 4rem;
+    padding-left: 20vw;
+    height: 100vh;
+    background: transparent;
+    >.add{
+      margin-left: 40%;
+      width:150px;
+      height: 50px;
+      color: black;
+      background-color: #fcfc;
+      border-radius: 15px;
+    }
+    >.add-dropdown{
+      position: absolute;
+      top: 13.5rem;
+      width: 170px;
+      margin-left:62% ;
+      padding: 15px;
+      border-radius: 8px;
+      background-color:rgba(255, 255,255, 0.2);
+      border: 1px solid grey;
+      >ul{
+        cursor: pointer;
+      }
+    }
+    >.add-dropdown::before{
+      content: ''; 
+      position: absolute;
+       top: -0.9rem;
+       right: 2.2rem;
+       width: 25px;
+       height: 25px;
+       transform: rotate(45deg);
+       background-color: #fff;
+       border-left: 1px solid gray;
+       border-top: 1px solid gray;
+    }
+  }
+}
+
+.card-container{
+   padding-top: 30px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 4rem;
+}
